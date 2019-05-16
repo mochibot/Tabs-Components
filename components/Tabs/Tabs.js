@@ -1,3 +1,11 @@
+class Tabs {
+  constructor(element) {
+    this.element = element;
+    this.tablink = new TabLink()
+  }
+}
+
+
 
 class TabLink {
   constructor(element) {
@@ -49,6 +57,7 @@ class TabItem {
 
     // Add a class named "tabs-item-selected" to this element
     this.element.classList.add('tabs-item-selected');
+    this.element.classList.add('fade-in');
   }
 }
 
@@ -67,3 +76,5 @@ links = document.querySelectorAll('.tabs-link[data-tab]');
 links.forEach(element => {
   const tabLinkInstance = new TabLink(element);
 });
+
+//Animation
